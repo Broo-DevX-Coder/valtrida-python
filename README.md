@@ -280,12 +280,9 @@ Full developer documentation — one page per source file, plus architecture not
 
 ## 🗺 Roadmap
 
-- [ ] Replace the hardcoded developer-machine icon path in `Styles/qss.py` with a portable asset reference
-- [ ] Implement (or formally remove) the currently-scaffolded plugin system referenced in `prepare.py`
-- [ ] Decide the future of the placeholder `USER_OFFICIAL_ACCOUNT_INFO` cloud/premium account concept
-- [ ] Rename `reqirments.txt` → `requirements.txt` across the codebase in a single coordinated change
-- [ ] Add automated UI/integration tests (currently verified manually)
-- [ ] Expand exchange support beyond Binance
+- [ ] Add Plugins system to add auther futers
+- [ ] Optimize GIL usage by add system that separates windows on separated processes
+for any ideas, cominucate with us by [`CONTRIBUTING`](CONTRIBUTING.md) 
 
 > This roadmap reflects known rough edges tracked in [`DOCS/ARCHITECTURE.md`](DOCS/ARCHITECTURE.md#known-issues) — contributions toward any of these are welcome.
 
