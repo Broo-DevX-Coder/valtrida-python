@@ -4,12 +4,12 @@
 
 **A local-first desktop trading terminal for Binance, built with Python and PySide2.**
 
-[![Python](https://img.shields.io/badge/python-3.10%2B-blue?logo=python&logoColor=white)](https://www.python.org/)
+[![Python](https://img.shields.io/badge/python-3.8%2B-blue?logo=python&logoColor=white)](https://www.python.org/)
 [![PySide2](https://img.shields.io/badge/UI-PySide2%20(Qt)-41CD52?logo=qt&logoColor=white)](https://pypi.org/project/PySide2/)
 [![Binance](https://img.shields.io/badge/exchange-Binance-F0B90B?logo=binance&logoColor=black)](https://www.binance.com/)
 [![Local First](https://img.shields.io/badge/data-local--first-success)](#-security)
 [![License](https://img.shields.io/badge/license-all%20rights%20reserved-lightgrey)](#-license)
-[![Status](https://img.shields.io/badge/status-active%20development-orange)](#-roadmap)
+[![Status](https://img.shields.io/badge/status-research%20project-purple)]
 
 </div>
 
@@ -305,6 +305,6 @@ You can see lisence and rules on [`LICENSE`](LICENSE)
 
 <div align="center">
 
-Made with ♥Broo-Dev-X♥ for traders who prefer native apps over browser tabs.
+Built with Python, Qt, and a local-first philosophy.
 
 </div>
