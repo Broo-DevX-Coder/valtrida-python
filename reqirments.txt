@@ -1,0 +1,12 @@
+PySide2
+shiboken2
+qasync
+pyqtgraph
+numpy<2
+pandas
+aiohttp
+websockets
+pycryptodome
+cryptography
+janus
+uniquant

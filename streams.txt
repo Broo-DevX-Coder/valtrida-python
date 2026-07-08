@@ -1,0 +1,183 @@
+streams.py
+==========
+
+Event Streams System
+--------------------
+
+This module defines the global event streams used by the application.
+The architecture follows an Event-Driven design where components do not
+call each other directly. Instead, they communicate by emitting events
+to streams.
+
+Each stream represents a specific category of events.
+
+Core Principles
+---------------
+
+1. Streams carry EVENTS, not heavy OBJECTS.
+2. Events must follow a unified structure.
+3. Components subscribe only to events they need.
+4. Streams do not execute logic; they only transport events.
+5. Real objects (tasks, windows, threads) are stored in registries.
+
+Event Structure
+---------------
+
+All events must follow this schema:
+
+    {
+        "type": str,        # Stream category
+        "event": str,        # Event name
+        "source": str,      # Component that emitted the event
+        "time": float,      # Timestamp
+        "payload": dict        # Event payload (optional)
+    }
+
+Example:
+
+    {
+        "type": "system",
+        "event": "login_clicked",
+        "source": "main_window",
+        "time": 1710000000,
+        "payload": {}
+    }
+
+
+Available Streams
+-----------------
+
+SystemStream
+~~~~~~~~~~~~
+
+Responsible for internal system commands and UI-driven actions.
+
+Typical events:
+
+    - login_clicked
+    - coin_clicked (2 arguments in payload.cl_type: pen,coin)
+
+Live cycle events:
+    - end_of_program
+    - start_of_program
+
+Typical types:
+    - live_sycle
+    - window_event
+    - plugin_event
+
+Example:
+
+    {
+        "type": "system",
+        "event": "login_clicked",
+        "source": "toolbar",
+        "payload": {
+            "headen":True,
+            "event":"the curent event is ..."
+        }
+    }
+
+
+UserStream
+~~~~~~~~~~
+
+Represents user-related state changes and outcomes.
+
+Typical events:
+
+    - logged_in
+    - logged_out
+    - user_data_changed
+    - user_binance_data_changed
+
+Typical types:
+
+    - user_local_info
+    - binance_balances
+
+Example:
+
+    {
+        "type": "user_local_info",
+        "event": "logged_in",
+        "source": "auth_service",
+        "payload": {
+            "user_id": 42
+        }
+    }
+
+
+ErrorStream
+~~~~~~~~~~~
+
+Used for critical failures that may require system shutdown.
+
+Typical events:
+
+    connection_error
+    general_error
+
+Example:
+
+    {
+        "type": "CONNECTION_429",
+        "event": "connection_error",
+        "source": "market_service",
+        "payload": {
+            "exchange": "bitget"
+        }
+    }
+
+
+LogStream
+~~~~~~~~~
+
+Used strictly for observability and diagnostics.
+
+These events do NOT change system state.
+
+Typical events:
+
+    log
+
+Example:
+
+    {
+        "type": "info",
+        "event": "log",
+        "source": "rsi_indicator",
+        "payload": {
+            "symbol": "BTCUSDT"
+        }
+    }
+
+
+Design Rules
+------------
+
+DO:
+
+✔ emit clear events
+✔ keep payload small
+✔ use IDs instead of objects
+✔ document event names
+
+DO NOT:
+
+✘ send Qt windows through streams
+✘ send asyncio tasks through system streams
+✘ mix different responsibilities in one stream
+✘ create undocumented event types
+
+
+Goal
+----
+
+This architecture ensures:
+
+- loose coupling between components
+- easier testing
+- clean shutdown management
+- observable system behavior
+- scalable plugin-like extensions
