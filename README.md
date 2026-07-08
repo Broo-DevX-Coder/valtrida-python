@@ -115,14 +115,6 @@ Security is a first-class design constraint, not an afterthought:
 
 ## Getting Started
 
-<div align="center">
-
-| Step 1 — Create Local Account | Step 2 — Add Binance API Keys | Step 3 — Login & Start Trading |
-|:---:|:---:|:---:|
-| <img src="assets/screenshots/login-step1-create-account.png" alt="Create local account screenshot" width="260"> | <img src="assets/screenshots/login-step2-enter-password.png" alt="Add Binance API keys screenshot" width="260"> | <img src="assets/screenshots/login-step3-add-api-key.png" alt="Login and start trading screenshot" width="260"> |
-
-</div>
-
 ### Step 1 — Create a Local Account
 
 Choose a username and password to create a new local profile. Nothing is sent anywhere at this stage — the account exists only on your machine.
