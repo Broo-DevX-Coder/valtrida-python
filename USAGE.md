@@ -14,6 +14,7 @@ Install dependencies from the requirements file (note: the file is named `reqirm
 
 ```bash
 pip install -r reqirments.txt
+cd Program
 ```
 
 Key dependencies include PySide2 (UI), pyqtgraph (charts), `cryptography` (local encryption), and a Binance client library (`uniquant`, listed in `reqirments.txt`).

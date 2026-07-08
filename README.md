@@ -27,11 +27,12 @@ It runs entirely on your own machine: your Binance API keys are encrypted and st
 ## Project Layout
 
 ```
+streams.txt           Authoritative reference for the internal event/stream schema
+Program/              The folder that contain all program files and folders bellow
+
 index.py             Application entry point
 prepare.py            Bootstrap: folders, config, plugins, pre-flight checks
 config.py             Global runtime configuration (color mode, etc.)
-streams.txt           Authoritative reference for the internal event/stream schema
-
 API/                  Binance REST/market data access layer
 base/                 Shared registries and utilities (charts, tool bar, user data, files/folders)
 core/                 Application core: async controller, error handling, logging, folder setup
@@ -54,6 +55,7 @@ Full developer documentation — one page per source file, plus architecture not
 
 ```bash
 pip install -r reqirments.txt   # note: filename is "reqirments.txt" (existing typo in the repo)
+cd Program
 python index.py
 ```
 
