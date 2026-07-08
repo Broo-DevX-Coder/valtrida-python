@@ -4,12 +4,12 @@
 
 **A local-first desktop trading terminal for Binance, built with Python and PySide2.**
 
-[![Python](https://img.shields.io/badge/python-3.8%2B-blue?logo=python&logoColor=white)](https://www.python.org/)
+[![Python](https://img.shields.io/badge/python-3.10%2B-blue?logo=python&logoColor=white)](https://www.python.org/)
 [![PySide2](https://img.shields.io/badge/UI-PySide2%20(Qt)-41CD52?logo=qt&logoColor=white)](https://pypi.org/project/PySide2/)
 [![Binance](https://img.shields.io/badge/exchange-Binance-F0B90B?logo=binance&logoColor=black)](https://www.binance.com/)
 [![Local First](https://img.shields.io/badge/data-local--first-success)](#-security)
 [![License](https://img.shields.io/badge/license-all%20rights%20reserved-lightgrey)](#-license)
-[![Status](https://img.shields.io/badge/status-personal%2Fhobby%20project-orange)](#-roadmap)
+[![Status](https://img.shields.io/badge/status-active%20development-orange)](#-roadmap)
 
 </div>
 
@@ -163,10 +163,11 @@ cd valtrida
 
 ### Install Dependencies
 
-> Note: the dependencies file is named `reqirments.txt` (existing typo in the repo, not a documentation error).
+> Note: the dependencies file is named `requirements.txt` (existing typo in the repo, not a documentation error).
 
 ```bash
-pip install -r reqirments.txt
+pip install -r requirements.txt
+cd Program
 ```
 
 Key dependencies: **PySide2** (UI), **pyqtgraph** (charts), **cryptography** (local encryption), and a Binance client library.
@@ -187,7 +188,7 @@ Requires Python 3.8+ and a graphical desktop environment (Linux, Windows, or mac
 |---|---|
 | UI Framework | PySide2 (Qt for Python) |
 | Charts | pyqtgraph |
-| Exchange | Binance REST + WebSocket API (via `python-binance` / `uniquant`, see `reqirments.txt`) |
+| Exchange | Binance REST + WebSocket API (via `python-binance` / `uniquant`, see `requirements.txt`) |
 | Concurrency | Python `threading`, custom async/task controller |
 | Local storage | Flat encrypted files under `~/.valtrida/` |
 | Cryptography | `cryptography` (AES-GCM, PBKDF2-HMAC-SHA256) |
@@ -219,7 +220,7 @@ valtrida/
 ├── prepare.py             # Bootstrap: folders, config, event streams, pre-flight checks
 ├── config.py               # Global runtime configuration (e.g. COLOR_MODE)
 ├── streams.txt             # Authoritative reference for the internal event/stream schema
-├── reqirments.txt          # Python dependencies (note: filename typo, kept as-is)
+├── requirements.txt          # Python dependencies (note: filename typo, kept as-is)
 │
 ├── Program/
     │
@@ -301,7 +302,7 @@ Contributions are welcome. Before opening a PR:
 
 ## 📄 License
 
-No license file is currently included in this repository. Treat the code as **all rights reserved** by the author unless a `LICENSE` file is added.
+You can see lisence and rules on [`LICENSE`](LICENSE)
 
 <div align="center">
 

@@ -5,7 +5,7 @@ Thanks for your interest in contributing! This document explains how the codebas
 ## Getting Set Up
 
 ```bash
-pip install -r reqirments.txt
+pip install -r requirements.txt
 cd Program
 python index.py
 ```
@@ -33,7 +33,7 @@ Before changing core plumbing, read [`DOCS/ARCHITECTURE.md`](DOCS/ARCHITECTURE.m
 
 ## Coding Conventions
 
-- The codebase currently contains some existing identifier typos (e.g. `orderbook_initialyze`, `secreat`, `rigister`, `shart`, `nessary`) and one misspelled filename (`reqirments.txt` instead of `requirements.txt`). **Do not silently "fix" these** in unrelated commits — renaming a public identifier or file is a breaking change that should be its own reviewed PR, since other code and possibly external scripts may depend on the current names.
+- The codebase currently contains some existing identifier typos (e.g. `orderbook_initialyze`, `secreat`, `rigister`, `shart`, `nessary`) and one misspelled filename (`requirements.txt` instead of `requirements.txt`). **Do not silently "fix" these** in unrelated commits — renaming a public identifier or file is a breaking change that should be its own reviewed PR, since other code and possibly external scripts may depend on the current names.
 - Match the existing style within a file rather than introducing a new one (e.g. Arabic comments appear in a few style-related files — preserve them, don't remove them incidentally).
 - Keep networking/blocking calls off the Qt main thread; use the existing `AsyncController` thread-tracking facilities in `core/async_controller.py` rather than spawning untracked `threading.Thread` instances, so they are properly joined/stopped on shutdown.
 
@@ -42,7 +42,7 @@ Before changing core plumbing, read [`DOCS/ARCHITECTURE.md`](DOCS/ARCHITECTURE.m
 - **Hardcoded absolute path**: `Styles/qss.py` references `/home/broo-dev/.valtrida/ASSETS/icons/svg/arrow-down.svg` for a dropdown arrow icon. This only resolves on the original author's machine. If you're fixing this, prefer resolving the path via `base/files_folders.py` (which already exposes `ASSETS_ICONS_SVG`) or embedding the icon as base64 like the rest of `Styles/icons.py` does.
 - **Unused plugin scaffolding**: `prepare.py` references a `plugins_manager` concept and `core/folders.py` / `base/files_folders.py` define a `PLUGINS_DIR` / `MORE_PACKAGES`, but there is no actual plugin loader implemented yet. Don't assume a plugin system exists at runtime.
 - **`USER_OFFICIAL_ACCOUNT_INFO`** (`base/user_data.py`) hints at future premium/cloud-account features that aren't built out — treat it as a placeholder, not a working feature.
-- **Filename typo**: `reqirments.txt` is the actual, in-use filename. Renaming it to `requirements.txt` would be a reasonable improvement but must update every reference to it (docs, CI, README) in the same change.
+- **Filename typo**: `requirements.txt` is the actual, in-use filename. Renaming it to `requirements.txt` would be a reasonable improvement but must update every reference to it (docs, CI, README) in the same change.
 
 ## Security Notes
 

@@ -10,14 +10,14 @@ This guide covers installing, running, and using Valtrida day-to-day.
 
 ## 2. Installation
 
-Install dependencies from the requirements file (note: the file is named `reqirments.txt`, not `requirements.txt` — this is an existing typo in the repo, not a documentation error):
+Install dependencies from the requirements file (note: the file is named `requirements.txt`, not `requirements.txt` — this is an existing typo in the repo, not a documentation error):
 
 ```bash
-pip install -r reqirments.txt
+pip install -r requirements.txt
 cd Program
 ```
 
-Key dependencies include PySide2 (UI), pyqtgraph (charts), `cryptography` (local encryption), and a Binance client library (`uniquant`, listed in `reqirments.txt`).
+Key dependencies include PySide2 (UI), pyqtgraph (charts), `cryptography` (local encryption), and a Binance client library (`uniquant`, listed in `requirements.txt`).
 
 ## 3. First Run
 
@@ -91,7 +91,7 @@ Closing the main window triggers the app's coordinated shutdown path (`AsyncCont
 
 ## 8. Troubleshooting
 
-- **App won't start / import errors**: confirm all dependencies from `reqirments.txt` are installed for the Python interpreter you're running.
+- **App won't start / import errors**: confirm all dependencies from `requirements.txt` are installed for the Python interpreter you're running.
 - **Icons/arrows missing in dropdowns**: `Styles/qss.py` contains a hardcoded absolute path to an icon (`/home/broo-dev/.valtrida/.../arrow-down.svg`) that only exists on the original developer's machine. See the "Known Issues" section of [`DOCS/ARCHITECTURE.md`](DOCS/ARCHITECTURE.md) for details — this is a portability bug, not a sign your install is broken.
 - **Binance requests failing**: double-check your system clock is in sync (Binance rejects signed requests with too much time drift) and that your API key permissions match what the app is trying to do.
 

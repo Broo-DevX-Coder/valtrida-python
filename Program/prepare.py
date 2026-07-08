@@ -3,6 +3,8 @@
 # ==================================================================
 
 import os
+
+from Program.charts import candlestick_chart
 os.environ["QTWEBENGINE_CHROMIUM_FLAGS"] = "--no-sandbox --disable-gpu --disable-software-rasterizer"
 os.environ["QTWEBENGINE_DISABLE_SANDBOX"] = "1"
 os.environ["PYQTGRAPH_QT_LIB"] = "PySide2"
@@ -23,7 +25,7 @@ import base
 import API
 from core import folders
 from base import charts,tool_bar
-from charts import candels_shart,order_book
+from charts import order_book
 from windows.tool_bar import home,wallet,markets
 from core import SystemStream
 
@@ -43,7 +45,7 @@ for obj in listners_objs:
 logging.debug("All listners are ready")
 
 # == Charts classes ==
-charts.CHARTS_CLASSES["candals_shart"] = candels_shart.SimpleCandelsChart
+charts.CHARTS_CLASSES["candals_shart"] = candlestick_chart.SimpleCandelsChart
 charts.CHARTS_CLASSES["order_book"] = order_book.OrderBook
 
 # == Tool bar classes ==

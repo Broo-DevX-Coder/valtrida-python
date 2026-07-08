@@ -11,7 +11,7 @@ from PySide2.QtGui import QIcon
 
 # == local ==
 from base.user_data import *
-from API.b_accont import get_account_info
+from Program.API.account import get_account_info
 from user.local_cypher import CipherUserData
 
 from core import AsyncController,log,error,critical_error,UserStream,SystemStream

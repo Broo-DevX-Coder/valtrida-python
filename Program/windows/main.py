@@ -20,7 +20,7 @@ from base.user_data import *
 
 from core import AsyncController,log,error,critical_error,UserStream,SystemStream
 from Styles.qss import QSS
-from API.b_accont import get_total_balance_in_usdt
+from Program.API.account import get_total_balance_in_usdt
 from .coin import OneCoin
 
 
