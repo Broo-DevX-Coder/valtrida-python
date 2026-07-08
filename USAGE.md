@@ -41,6 +41,23 @@ Valtrida stores accounts **locally only** — there is no central server account
 - **Register**: Create a new local profile with a username/password. If you want to connect your Binance account, you'll be asked for your Binance API key and secret (see `user/widgets/register_via_binance_api.py`). These are encrypted before being written to disk (see `user/local_cypher.py`) and stored under `~/.valtrida/data/users/` as a per-user encrypted file.
 - **Login**: Enter your local username and password (see `user/widgets/login.py`). The password is used to derive the decryption key for your stored API credentials — it is never sent anywhere.
 
+<div align="center"> <table> <tr>
+
+<td align="center" width="50%">
+
+**Register**
+
+<img src="assets/screenshots/creat_accont.png" alt="creat_accont screenshot" width="380">
+</td>
+<td align="center" width="50%">
+
+**Login**
+
+<img src="assets/screenshots/login.png" alt="Login screenshot" width="380">
+</td>
+
+</tr> </table> </div>
+
 > Your Binance API secret never leaves your machine. It is only used locally to sign requests made directly to Binance's servers.
 
 ### Creating a Binance API key (if you don't have one)
@@ -52,7 +69,9 @@ Valtrida stores accounts **locally only** — there is no central server account
 
 ## 5. Main Screens
 
-Once logged in, the main window (`windows/main.py`) presents a navigation tool bar (`windows/tool_bar/`) with:
+| you need't to login to use the app, it just for chowing balances from your binance wallet
+
+The main window (`windows/main.py`) presents a navigation tool bar (`windows/tool_bar/`) with:
 
 - **Home** (`windows/tool_bar/home.py`) — overview/landing screen.
 - **Markets** (`windows/tool_bar/markets.py`) — search and browse trading pairs; click a pair to open its detail window (`windows/coin.py`) with a live candlestick chart and order book.
@@ -75,3 +94,11 @@ Closing the main window triggers the app's coordinated shutdown path (`AsyncCont
 - **App won't start / import errors**: confirm all dependencies from `reqirments.txt` are installed for the Python interpreter you're running.
 - **Icons/arrows missing in dropdowns**: `Styles/qss.py` contains a hardcoded absolute path to an icon (`/home/broo-dev/.valtrida/.../arrow-down.svg`) that only exists on the original developer's machine. See the "Known Issues" section of [`DOCS/ARCHITECTURE.md`](DOCS/ARCHITECTURE.md) for details — this is a portability bug, not a sign your install is broken.
 - **Binance requests failing**: double-check your system clock is in sync (Binance rejects signed requests with too much time drift) and that your API key permissions match what the app is trying to do.
+
+## 9. Chow any Chart
+
+To chow any chart like picture in [`RAEDME.md`](RAEDME.md), you need to
+- **Go To Markets window**: in tool bar from in main window, you will fond a button by name markets, click it.
+- **From the Market window**: If you lock to any card od pair, you will found a mall pen, click on them and you get Chow Charts popup window.
+- **From coin detail**: If you enter to any coin detail, you will found a button it top bar (pen picture), click on them, you will get Chow Charts popup window.
+- **In Chow Chart window**: You will see in this page some of settings, first chow your chart (candals and orderbook are defaults), change all settings that you need, and charts will appear on your desktop like a separate window 
