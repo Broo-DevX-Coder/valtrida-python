@@ -9,7 +9,7 @@
 [![Binance](https://img.shields.io/badge/exchange-Binance-F0B90B?logo=binance&logoColor=black)](https://www.binance.com/)
 [![Local First](https://img.shields.io/badge/data-local--first-success)](#-security)
 [![License](https://img.shields.io/badge/license-all%20rights%20reserved-lightgrey)](#-license)
-[![Status](https://img.shields.io/badge/status-research%20project-purple)]
+[![Status](https://img.shields.io/badge/status-research%20project-purple)](#-roadmap)
 
 </div>
 
