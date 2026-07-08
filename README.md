@@ -13,8 +13,6 @@
 
 </div>
 
-> **Placeholder notice:** the logo and screenshots referenced in this README don't exist in the repo yet. Drop your own images into `assets/` and `assets/screenshots/` using the filenames below and they'll render automatically — see [`assets/screenshots/README.md`](assets/screenshots/README.md) for the full list.
-
 ---
 
 ## Screenshots
@@ -279,11 +277,12 @@ Full developer documentation — one page per source file, plus architecture not
 
 ---
 
-## 🗺 Roadmap
+- [ ] Plugin SDK and marketplace support
+- [ ] Multi-process window architecture to reduce GIL contention
+- [ ] Additional exchange integrations
+- [ ] Advanced order-flow indicators
 
-- [ ] Add Plugins system to add auther futers
-- [ ] Optimize GIL usage by add system that separates windows on separated processes
-for any ideas, cominucate with us by [`CONTRIBUTING`](CONTRIBUTING.md) 
+For ideas and feature requests, see [CONTRIBUTING.md](CONTRIBUTING.md).
 
 > This roadmap reflects known rough edges tracked in [`DOCS/ARCHITECTURE.md`](DOCS/ARCHITECTURE.md#known-issues) — contributions toward any of these are welcome.
 
