@@ -6,6 +6,7 @@ Thanks for your interest in contributing! This document explains how the codebas
 
 ```bash
 pip install -r reqirments.txt
+cd Program
 python index.py
 ```
 
