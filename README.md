@@ -277,6 +277,8 @@ Full developer documentation — one page per source file, plus architecture not
 
 ---
 
+## 🗺 Roadmap
+
 - [ ] Plugin SDK and marketplace support
 - [ ] Multi-process window architecture to reduce GIL contention
 - [ ] Additional exchange integrations
